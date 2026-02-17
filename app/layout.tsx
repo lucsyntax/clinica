@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+pq import type { Metadata } from "next";
 import { Figtree, Noto_Sans } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   keywords: ["dentista", "clínica dentária", "lentes de contato dental", "implante dentário", "vivant odontologia"],
   openGraph: {
     title: "VIVANT Odontologia",
-    description: "Sorrisos saudáveis com tecnologia e cuidado. Agende sua avaliação.",
+    description: "Sorrisos saudáveis com tecnologia e cuidado. Agende sua avaliação",
     type: "website",
   },
   icons: {
