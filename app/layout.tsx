@@ -1,4 +1,4 @@
-pq import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Figtree, Noto_Sans } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
