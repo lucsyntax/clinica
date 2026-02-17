@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typography Preview — VIVANT Clinique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #F0F4F8; color: #0F172A; padding: 40px 20px; }
+  
+  h1.page-title {
+    text-align: center;
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #94A3B8;
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 2px solid #E2E8F0;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .card:hover { border-color: #1D4ED8; box-shadow: 0 20px 60px rgba(29,78,216,0.12); }
+
+  .card-header {
+    padding: 20px 28px;
+    background: #0F172A;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .card-header .label {
+    font-family: system-ui;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .card-header .tag {
+    font-family: system-ui;
+    font-size: 11px;
+    background: #1D4ED8;
+    padding: 4px 12px;
+    border-radius: 99px;
+    font-weight: 600;
+  }
+  .recommended .card-header { background: #1D4ED8; }
+
+  .card-body { padding: 32px 28px; }
+
+  .font-names {
+    font-family: system-ui;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #94A3B8;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .font-names span { color: #1D4ED8; font-weight: 700; }
+
+  .preview-brand {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    line-height: 1.1;
+    color: #0F172A;
+  }
+  .preview-brand em { font-style: italic; color: #1D4ED8; }
+
+  .preview-tagline {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #B8860B;
+    margin-bottom: 28px;
+  }
+
+  .divider {
+    height: 1px;
+    background: #E2E8F0;
+    margin: 24px 0;
+  }
+
+  .preview-heading {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #0F172A;
+    line-height: 1.2;
+  }
+  .preview-heading em { font-style: italic; color: #1D4ED8; }
+
+  .preview-subheading {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #334155;
+    line-height: 1.3;
+  }
+
+  .preview-body {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 20px;
+  }
+
+  .preview-cta {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 99px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    background: #1D4ED8;
+    border: none;
+    cursor: pointer;
+  }
+
+  .preview-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .stat-box {
+    text-align: center;
+    padding: 16px 8px;
+    background: #EFF6FF;
+    border-radius: 12px;
+    border: 1px solid #BFDBFE;
+  }
+  .stat-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1D4ED8;
+  }
+  .stat-label {
+    font-size: 11px;
+    color: #475569;
+    margin-top: 4px;
+  }
+
+  /* Option A fonts */
+  .option-a .preview-brand,
+  .option-a .preview-heading,
+  .option-a .preview-subheading,
+  .option-a .stat-value { font-family: 'Cormorant Garamond', serif; }
+  .option-a .preview-tagline,
+  .option-a .preview-body,
+  .option-a .preview-cta,
+  .option-a .stat-label { font-family: 'Montserrat', sans-serif; }
+
+  /* Option B fonts */
+  .option-b .preview-brand,
+  .option-b .preview-heading,
+  .option-b .preview-subheading,
+  .option-b .stat-value { font-family: 'DM Serif Display', serif; }
+  .option-b .preview-tagline,
+  .option-b .preview-body,
+  .option-b .preview-cta,
+  .option-b .stat-label { font-family: 'DM Sans', sans-serif; }
+
+  /* Option C fonts */
+  .option-c .preview-brand,
+  .option-c .preview-heading,
+  .option-c .preview-subheading,
+  .option-c .stat-value { font-family: 'Lora', serif; }
+  .option-c .preview-tagline,
+  .option-c .preview-body,
+  .option-c .preview-cta,
+  .option-c .stat-label { font-family: 'Nunito Sans', sans-serif; }
+
+  @media (max-width: 900px) {
+    .grid { grid-template-columns: 1fr; max-width: 500px; }
+  }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">VIVANT Clinique — Typography Preview</h1>
+
+<div class="grid">
+
+  <!-- OPTION A -->
+  <div class="card recommended option-a">
+    <div class="card-header">
+      <span class="label">Opção A</span>
+      <span class="tag">⭐ Recomendada</span>
+    </div>
+    <div class="card-body">
+      <div class="font-names">heading: <span>Cormorant Garamond</span> &nbsp;|&nbsp; body: <span>Montserrat</span></div>
+      
+      <div class="preview-brand">VIVANT <em>Clinique</em></div>
+      <div class="preview-tagline">Odontologia de Excelência</div>
+      
+      <div class="divider"></div>
+
+      <div class="preview-heading">Excelência <em>Estética</em></div>
+      <div class="preview-subheading">Seu sorriso, nossa arte.</div>
+      <div class="preview-body">
+        Protocolos minimamente invasivos planejados digitalmente para preservar a beleza natural do seu sorriso. Agende sua avaliação exclusiva.
+      </div>
+      <button class="preview-cta">Agendar Consulta</button>
+
+      <div class="preview-stats">
+        <div class="stat-box">
+          <div class="stat-value">10+</div>
+          <div class="stat-label">Anos</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">5.000+</div>
+          <div class="stat-label">Sorrisos</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">5.0</div>
+          <div class="stat-label">Google</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTION B -->
+  <div class="card option-b">
+    <div class="card-header">
+      <span class="label">Opção B</span>
+      <span class="tag">Moderna</span>
+    </div>
+    <div class="card-body">
+      <div class="font-names">heading: <span>DM Serif Display</span> &nbsp;|&nbsp; body: <span>DM Sans</span></div>
+      
+      <div class="preview-brand">VIVANT <em>Clinique</em></div>
+      <div class="preview-tagline">Odontologia de Excelência</div>
+      
+      <div class="divider"></div>
+
+      <div class="preview-heading">Excelência <em>Estética</em></div>
+      <div class="preview-subheading">Seu sorriso, nossa arte.</div>
+      <div class="preview-body">
+        Protocolos minimamente invasivos planejados digitalmente para preservar a beleza natural do seu sorriso. Agende sua avaliação exclusiva.
+      </div>
+      <button class="preview-cta">Agendar Consulta</button>
+
+      <div class="preview-stats">
+        <div class="stat-box">
+          <div class="stat-value">10+</div>
+          <div class="stat-label">Anos</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">5.000+</div>
+          <div class="stat-label">Sorrisos</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">5.0</div>
+          <div class="stat-label">Google</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTION C -->
+  <div class="card option-c">
+    <div class="card-header">
+      <span class="label">Opção C</span>
+      <span class="tag">Acolhedora</span>
+    </div>
+    <div class="card-body">
+      <div class="font-names">heading: <span>Lora</span> &nbsp;|&nbsp; body: <span>Nunito Sans</span></div>
+      
+      <div class="preview-brand">VIVANT <em>Clinique</em></div>
+      <div class="preview-tagline">Odontologia de Excelência</div>
+      
+      <div class="divider"></div>
+
+      <div class="preview-heading">Excelência <em>Estética</em></div>
+      <div class="preview-subheading">Seu sorriso, nossa arte.</div>
+      <div class="preview-body">
+        Protocolos minimamente invasivos planejados digitalmente para preservar a beleza natural do seu sorriso. Agende sua avaliação exclusiva.
+      </div>
+      <button class="preview-cta">Agendar Consulta</button>
+
+      <div class="preview-stats">
+        <div class="stat-box">
+          <div class="stat-value">10+</div>
+          <div class="stat-label">Anos</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">5.000+</div>
+          <div class="stat-label">Sorrisos</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">5.0</div>
+          <div class="stat-label">Google</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

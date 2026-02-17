@@ -1,0 +1,18 @@
+[
+  {
+    "id": "d1",
+    "name": "Dra. Vitória Ferreira",
+    "cro": "SP-12345",
+    "bio": "Especialista em Dentística Restauradora e Harmonização Orofacial. Visionária do conceito Bio-Digital.",
+    "specialties": ["Estética", "Harmonização"],
+    "photoUrl": "/images/dra-elisa.png"
+  },
+  {
+    "id": "d2",
+    "name": "Dr. Lucas Costa",
+    "cro": "SP-67890",
+    "bio": "Mestre em Implantodontia e Cirurgia Guiada. Foco em reabilitação oral complexa.",
+    "specialties": ["Implantes", "Cirurgia"],
+    "photoUrl": "/images/dr-rafael.png"
+  }
+]

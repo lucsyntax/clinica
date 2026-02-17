@@ -1,0 +1,62 @@
+[
+  {
+    "id": "t1",
+    "title": "Lentes de Contato",
+    "description": "Transformação do sorriso com porcelana ultrafina e planejamento digital 3D.",
+    "category": "Estética",
+    "durationMinutes": 120,
+    "priceRange": "Sob Consulta",
+    "icon": "sparkles",
+    "image": "/images/lentes_contato.png"
+  },
+  {
+    "id": "t2",
+    "title": "Invisalign®",
+    "description": "Alinhamento dental invisível com tecnologia SmartTrack. Previsibilidade total.",
+    "category": "Ortodontia",
+    "durationMinutes": 45,
+    "priceRange": "R$ 12.000 - R$ 18.000",
+    "icon": "smile",
+    "image": "/images/invisalign.png"
+  },
+  {
+    "id": "t3",
+    "title": "Implantes Guiados",
+    "description": "Cirurgia sem cortes com guia 3D. Recuperação 3x mais rápida.",
+    "category": "Implantes",
+    "durationMinutes": 90,
+    "priceRange": "Sob Consulta",
+    "icon": "shield-check",
+    "image": "/images/implantes.jpg"
+  },
+  {
+    "id": "t4",
+    "title": "Harmonização Facial",
+    "description": "Equilíbrio estético funcional com preenchedores e toxina botulínica.",
+    "category": "Estética",
+    "durationMinutes": 60,
+    "priceRange": "R$ 2.500 - R$ 5.000",
+    "icon": "heart-pulse",
+    "image": "/images/harmonizacao.png"
+  },
+  {
+    "id": "t5",
+    "title": "Limpeza e Prevenção",
+    "description": "Protocolo completo de higienização profissional e avaliação clínica para manter a saúde bucal em dia.",
+    "category": "Clínica Geral",
+    "durationMinutes": 45,
+    "priceRange": "R$ 450",
+    "icon": "scan",
+    "image": "/images/limpeza.jpg"
+  },
+  {
+    "id": "t6",
+    "title": "Clareamento Laser",
+    "description": "Tecnologia Violet LED para resultados imediatos sem sensibilidade.",
+    "category": "Estética",
+    "durationMinutes": 60,
+    "priceRange": "R$ 1.200",
+    "icon": "zap",
+    "image": "/images/clareamento.png"
+  }
+]

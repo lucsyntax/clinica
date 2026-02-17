@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* ============================================================
+     DENTAL TRUST — Design System v2 (Option B)
+     Deep Navy + Ocean Blue + Trust Green + Soft Cyan
+     Optimized for professional medical authority
+     ============================================================ */
+
+  /* Primary — Ocean Blue */
+  --color-primary: #02457A;
+  --color-primary-foreground: #FFFFFF;
+  --color-primary-hover: #001B48;
+  --color-primary-light: #018ABE;
+  --color-primary-bg: rgba(2, 69, 122, 0.08);
+
+  /* CTA — Bright Blue (Trust) */
+  --color-cta: #018ABE;
+  --color-cta-text: #FFFFFF;
+  --color-cta-hover: #02457A;
+
+  /* Accent — Soft Blue/Cyan */
+  --color-accent: #97CADB;
+  --color-accent-light: rgba(151, 202, 219, 0.15);
+  --color-accent-hover: #018ABE;
+
+  /* Text */
+  --color-text-dark: #001B48;      /* Deep Navy */
+  --color-text-medium: #334E68;    /* Slate Blue */
+  --color-text-light: #627D98;     /* Muted Blue */
+  --color-text-on-dark: #D6E8EE;
+
+  /* Backgrounds */
+  --color-bg-page: #FFFFFF;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-subtle: #D6E8EE;      /* Ice Blue */
+  --color-bg-section-alt: #F0F7FA; /* Very Light Blue */
+  --color-bg-muted: #E8F1F5;
+
+  /* Footer */
+  --color-footer-bg: #001B48;      /* Deep Navy */
+  --color-footer-text: #D6E8EE;
+  --color-footer-muted: #97CADB;
+
+  /* Borders */
+  --color-border: #D6E8EE;
+  --color-border-subtle: #E8F1F5;
+
+  /* Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-4xl: 2rem;
+  --radius-full: 9999px;
+
+  /* Shadows — Blue Tinted */
+  --shadow-soft: 0 8px 30px rgba(2, 69, 122, 0.06);
+  --shadow-glow: 0 0 40px rgba(1, 138, 190, 0.15);
+  --shadow-lg: 0 20px 50px rgba(0, 27, 72, 0.1);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+  /* Fonts */
+  --font-figtree: "Figtree", sans-serif;
+  --font-noto: "Noto Sans", sans-serif;
+  --font-sans: var(--font-noto), 'Noto Sans', 'Helvetica Neue', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-figtree), 'Figtree', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-md border border-white/40 shadow-soft;
+  }
+  .glass-dark {
+    @apply bg-[#001B48]/95 backdrop-blur-md border border-white/10 shadow-lg text-white;
+  }
+  .section-padding {
+    @apply py-20 md:py-32;
+  }
+}
+
+/* Base Styles */
+@layer base {
+  body {
+    background-color: var(--color-bg-page);
+    color: var(--color-text-dark);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    @apply text-text-dark font-bold tracking-tight;
+  }
+}
+
+/* Animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(1, 138, 190, 0.0);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(1, 138, 190, 0.3);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s infinite;
+}

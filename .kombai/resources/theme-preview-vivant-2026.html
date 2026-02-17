@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIVANT — Theme Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,700&family=Raleway:wght@200;300;400;500;600;700&family=Cinzel:wght@400;500;600;700;800&family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+img { max-width: 100%; display: block; }
+
+/* ============================================================
+   THEME 1 — NUDE DORÉ
+   High-fashion editorial luxury · Bodoni Moda + Raleway
+   ============================================================ */
+[data-theme="nude-dore"] {
+  --font-heading: 'Bodoni Moda', 'Georgia', serif;
+  --font-body: 'Raleway', 'Helvetica Neue', sans-serif;
+  --heading-weight: 700;
+  --body-weight: 400;
+  --body-light: 300;
+
+  --bg-page: #FDFAF6;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F5EDE1;
+  --bg-muted: #EFE5D6;
+
+  --color-primary: #B8923F;
+  --color-primary-hover: #A07E30;
+  --color-primary-light: #D4BC7C;
+  --color-primary-bg: rgba(184, 146, 63, 0.08);
+
+  --color-cta: #1F1A14;
+  --color-cta-text: #F5EDE1;
+  --color-cta-hover: #362E23;
+
+  --color-accent: #C9A96E;
+  --color-accent-light: rgba(201, 169, 110, 0.15);
+
+  --text-dark: #1F1A14;
+  --text-medium: #6B6056;
+  --text-light: #9A9189;
+  --text-on-dark: #F5EDE1;
+
+  --border-color: #E8E0D4;
+  --border-subtle: #F0E8DD;
+
+  --shadow-sm: 0 2px 8px rgba(31, 26, 20, 0.04);
+  --shadow-md: 0 8px 30px rgba(31, 26, 20, 0.06);
+  --shadow-lg: 0 20px 50px rgba(31, 26, 20, 0.08);
+  --shadow-glow: 0 0 40px rgba(184, 146, 63, 0.12);
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  --hero-overlay: linear-gradient(135deg, rgba(31,26,20,0.85) 0%, rgba(31,26,20,0.3) 50%, transparent 100%);
+  --hero-overlay-bottom: linear-gradient(to top, rgba(31,26,20,0.9) 0%, transparent 60%);
+  --footer-bg: #1F1A14;
+  --footer-text: #C9A96E;
+  --footer-muted: rgba(201, 169, 110, 0.5);
+}
+
+/* ============================================================
+   THEME 2 — CHAMPAGNE CLASSIC
+   Timeless classical elegance · Cinzel + Lato
+   ============================================================ */
+[data-theme="champagne-classic"] {
+  --font-heading: 'Cinzel', 'Georgia', serif;
+  --font-body: 'Lato', 'Helvetica Neue', sans-serif;
+  --heading-weight: 600;
+  --body-weight: 400;
+  --body-light: 300;
+
+  --bg-page: #F9F6F1;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F0E8DD;
+  --bg-muted: #E6DBCC;
+
+  --color-primary: #8C6B4A;
+  --color-primary-hover: #7A5B3D;
+  --color-primary-light: #C4A87D;
+  --color-primary-bg: rgba(140, 107, 74, 0.08);
+
+  --color-cta: #1C1714;
+  --color-cta-text: #F0E8DD;
+  --color-cta-hover: #332A22;
+
+  --color-accent: #C4A87D;
+  --color-accent-light: rgba(196, 168, 125, 0.15);
+
+  --text-dark: #1C1714;
+  --text-medium: #695D51;
+  --text-light: #988B7E;
+  --text-on-dark: #F0E8DD;
+
+  --border-color: #E2D9CC;
+  --border-subtle: #ECE4D9;
+
+  --shadow-sm: 0 2px 8px rgba(28, 23, 20, 0.04);
+  --shadow-md: 0 8px 30px rgba(28, 23, 20, 0.06);
+  --shadow-lg: 0 20px 50px rgba(28, 23, 20, 0.08);
+  --shadow-glow: 0 0 40px rgba(140, 107, 74, 0.12);
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  --hero-overlay: linear-gradient(135deg, rgba(28,23,20,0.88) 0%, rgba(28,23,20,0.35) 50%, transparent 100%);
+  --hero-overlay-bottom: linear-gradient(to top, rgba(28,23,20,0.9) 0%, transparent 60%);
+  --footer-bg: #1C1714;
+  --footer-text: #C4A87D;
+  --footer-muted: rgba(196, 168, 125, 0.5);
+}
+
+/* ============================================================
+   THEME 3 — ROSÉ MINIMAL
+   Spa-like luxury, rosy sophistication · Playfair Display + Raleway
+   ============================================================ */
+[data-theme="rose-minimal"] {
+  --font-heading: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Raleway', 'Helvetica Neue', sans-serif;
+  --heading-weight: 700;
+  --body-weight: 400;
+  --body-light: 300;
+
+  --bg-page: #FBF7F5;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F2EAE6;
+  --bg-muted: #E5DBD6;
+
+  --color-primary: #9C7B72;
+  --color-primary-hover: #876660;
+  --color-primary-light: #C4A89E;
+  --color-primary-bg: rgba(156, 123, 114, 0.08);
+
+  --color-cta: #231C1A;
+  --color-cta-text: #F2EAE6;
+  --color-cta-hover: #3A302C;
+
+  --color-accent: #C8A882;
+  --color-accent-light: rgba(200, 168, 130, 0.15);
+
+  --text-dark: #231C1A;
+  --text-medium: #6E5E58;
+  --text-light: #9A8D87;
+  --text-on-dark: #F2EAE6;
+
+  --border-color: #E5DBD6;
+  --border-subtle: #EDE5E1;
+
+  --shadow-sm: 0 2px 8px rgba(35, 28, 26, 0.04);
+  --shadow-md: 0 8px 30px rgba(35, 28, 26, 0.06);
+  --shadow-lg: 0 20px 50px rgba(35, 28, 26, 0.08);
+  --shadow-glow: 0 0 40px rgba(156, 123, 114, 0.12);
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --radius-xl: 34px;
+  --radius-full: 9999px;
+
+  --hero-overlay: linear-gradient(135deg, rgba(35,28,26,0.85) 0%, rgba(35,28,26,0.3) 50%, transparent 100%);
+  --hero-overlay-bottom: linear-gradient(to top, rgba(35,28,26,0.9) 0%, transparent 60%);
+  --footer-bg: #231C1A;
+  --footer-text: #C8A882;
+  --footer-muted: rgba(200, 168, 130, 0.5);
+}
+
+/* ============================================================
+   GLOBAL STYLES (themed via CSS vars)
+   ============================================================ */
+body {
+  font-family: var(--font-body);
+  font-weight: var(--body-weight);
+  background: var(--bg-page);
+  color: var(--text-dark);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--heading-weight);
+  line-height: 1.2;
+  color: var(--text-dark);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ============================================================
+   THEME SWITCHER (sticky top bar)
+   ============================================================ */
+.theme-switcher {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  backdrop-filter: blur(12px);
+  flex-wrap: wrap;
+}
+.theme-switcher-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-light);
+  margin-right: 8px;
+}
+.theme-btn {
+  padding: 10px 24px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-full);
+  background: var(--bg-page);
+  color: var(--text-medium);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+.theme-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.theme-btn.active {
+  background: var(--color-cta);
+  border-color: var(--color-cta);
+  color: var(--color-cta-text);
+}
+
+/* ============================================================
+   THEME INFO PANEL
+   ============================================================ */
+.theme-info {
+  background: var(--bg-subtle);
+  border-bottom: 1px solid var(--border-color);
+  padding: 40px 24px;
+}
+.theme-info-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.theme-info h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.theme-info .theme-desc {
+  color: var(--text-medium);
+  font-size: 15px;
+  margin-bottom: 24px;
+  max-width: 600px;
+  line-height: 1.7;
+}
+.theme-info .swatches {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.swatch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 6px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  color: var(--text-medium);
+  font-weight: 500;
+}
+.swatch-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+}
+.theme-meta {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.theme-meta-item {
+  font-size: 13px;
+  color: var(--text-light);
+}
+.theme-meta-item strong {
+  color: var(--text-dark);
+  font-weight: 600;
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 4px;
+}
+
+/* ============================================================
+   HEADER / NAV
+   ============================================================ */
+.site-header {
+  padding: 20px 0;
+  background: transparent;
+  position: relative;
+  z-index: 10;
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-dark);
+}
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 20px;
+}
+.logo-text {
+  font-family: var(--font-heading);
+  font-weight: var(--heading-weight);
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: var(--text-dark);
+}
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-medium);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--color-primary); }
+.header-cta {
+  padding: 12px 28px;
+  background: var(--color-cta);
+  color: var(--color-cta-text);
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+.header-cta:hover {
+  background: var(--color-cta-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #111;
+  margin-top: -80px;
+  padding-top: 80px;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=1920&q=80') center/cover no-repeat;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--hero-overlay);
+}
+.hero-overlay-bottom {
+  position: absolute;
+  inset: 0;
+  background: var(--hero-overlay-bottom);
+}
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 650px;
+  padding: 60px 0;
+}
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.hero-tag-line {
+  width: 40px;
+  height: 1px;
+  background: var(--color-accent);
+}
+.hero-tag-text {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--color-accent);
+  letter-spacing: 1px;
+}
+.hero h1 {
+  font-size: clamp(42px, 5.5vw, 72px);
+  color: white;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+}
+.hero h1 .highlight {
+  color: var(--color-accent);
+  position: relative;
+}
+.hero-desc {
+  font-size: 18px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.8;
+  margin-bottom: 36px;
+  max-width: 480px;
+  border-left: 2px solid var(--color-accent);
+  padding-left: 20px;
+  font-weight: var(--body-light);
+}
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.btn-hero {
+  padding: 16px 36px;
+  background: var(--color-accent);
+  color: var(--text-dark);
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.btn-hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+}
+.btn-hero svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s;
+}
+.btn-hero:hover svg { transform: translateX(3px); }
+.hero-phone {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: white;
+  text-decoration: none;
+}
+.hero-phone-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+.hero-phone-icon svg { width: 20px; height: 20px; color: var(--color-accent); }
+.hero-phone:hover .hero-phone-icon { background: rgba(255,255,255,0.1); }
+.hero-phone-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255,255,255,0.5);
+}
+.hero-phone-number {
+  font-family: var(--font-heading);
+  font-size: 17px;
+}
+
+/* Wave transition */
+.hero-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+}
+.hero-wave svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+/* ============================================================
+   SECTION HEADERS
+   ============================================================ */
+.section-tag {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  display: block;
+}
+.section-title {
+  font-size: clamp(32px, 3.5vw, 48px);
+  margin-bottom: 16px;
+}
+.section-title .em {
+  color: var(--color-primary);
+  font-style: italic;
+}
+.section-subtitle {
+  color: var(--text-light);
+  font-size: 17px;
+  max-width: 540px;
+  line-height: 1.8;
+}
+
+/* ============================================================
+   TREATMENTS SECTION
+   ============================================================ */
+.treatments {
+  padding: 100px 0;
+  background: var(--bg-page);
+}
+.treatments .section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.treatments .section-subtitle { margin: 0 auto; }
+.treatment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.treatment-card {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.treatment-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--color-primary-light);
+}
+.treatment-card-image {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  margin: 8px;
+  border-radius: calc(var(--radius-lg) - 4px);
+  background: var(--bg-subtle);
+}
+.treatment-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.treatment-card:hover .treatment-card-image img {
+  transform: scale(1.06);
+}
+.treatment-card-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary-bg);
+}
+.treatment-card-icon svg {
+  width: 48px;
+  height: 48px;
+  color: var(--color-primary);
+  stroke-width: 1;
+  opacity: 0.7;
+}
+.treatment-card-body {
+  padding: 24px;
+}
+.treatment-card-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+.treatment-card-category .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+.treatment-card h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  transition: color 0.3s;
+}
+.treatment-card:hover h3 { color: var(--color-primary); }
+.treatment-card p {
+  color: var(--text-light);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.treatment-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+.treatment-card-meta {
+  font-size: 12px;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.treatment-card-meta svg { width: 14px; height: 14px; }
+.treatment-card-arrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  transition: all 0.3s;
+}
+.treatment-card-arrow svg { width: 16px; height: 16px; }
+.treatment-card:hover .treatment-card-arrow {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* ============================================================
+   BENEFITS SECTION
+   ============================================================ */
+.benefits {
+  padding: 100px 0;
+  background: var(--bg-surface);
+}
+.benefits .section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.benefits .section-subtitle { margin: 0 auto; }
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.benefit-card {
+  padding: 36px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-page);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.4s;
+}
+.benefit-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+.benefit-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.benefit-icon svg { width: 26px; height: 26px; }
+.benefit-icon.style-1 { background: var(--color-primary-bg); color: var(--color-primary); }
+.benefit-icon.style-2 { background: var(--color-accent-light); color: var(--color-accent); }
+.benefit-icon.style-3 { background: rgba(188, 143, 143, 0.1); color: #9C7B72; }
+.benefit-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.benefit-card p {
+  color: var(--text-light);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.benefit-divider {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-light);
+  transition: color 0.3s;
+}
+.benefit-card:hover .benefit-divider { color: var(--color-primary); }
+.benefit-divider svg { width: 16px; height: 16px; }
+
+/* ============================================================
+   BOOKING / CTA SECTION
+   ============================================================ */
+.booking-section {
+  padding: 100px 0;
+  background: var(--bg-page);
+}
+.booking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.booking-left .section-subtitle {
+  margin-bottom: 40px;
+}
+.concierge-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.concierge-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  transition: all 0.3s;
+  cursor: default;
+}
+.concierge-item:hover {
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-md);
+}
+.concierge-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-primary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+.concierge-item:hover .concierge-icon {
+  background: var(--color-primary);
+  color: white;
+}
+.concierge-icon svg { width: 22px; height: 22px; }
+.concierge-item span {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 15px;
+}
+
+/* Form */
+.booking-form-card {
+  background: var(--bg-surface);
+  padding: 40px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-subtle);
+  position: relative;
+  overflow: hidden;
+}
+.form-blob-1 {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 150px;
+  height: 150px;
+  background: var(--color-accent-light);
+  border-radius: 50%;
+  filter: blur(40px);
+  pointer-events: none;
+}
+.form-blob-2 {
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 120px;
+  height: 120px;
+  background: var(--color-primary-bg);
+  border-radius: 50%;
+  filter: blur(30px);
+  pointer-events: none;
+}
+.booking-form-card h3 {
+  font-size: 28px;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+  position: relative;
+}
+.booking-form-card .form-desc {
+  color: var(--text-light);
+  font-size: 14px;
+  margin-bottom: 28px;
+  position: relative;
+}
+.form-field {
+  width: 100%;
+  padding: 16px 20px;
+  background: var(--bg-page);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-dark);
+  outline: none;
+  transition: all 0.3s;
+  margin-bottom: 14px;
+  position: relative;
+}
+.form-field::placeholder { color: var(--text-light); }
+.form-field:focus {
+  border-color: var(--color-primary-light);
+  background: var(--bg-surface);
+  box-shadow: 0 0 0 4px var(--color-primary-bg);
+}
+.form-select {
+  appearance: none;
+  cursor: pointer;
+}
+.btn-form-submit {
+  width: 100%;
+  padding: 18px;
+  background: var(--color-cta);
+  color: var(--color-cta-text);
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  margin-top: 8px;
+}
+.btn-form-submit:hover {
+  background: var(--color-cta-hover);
+  box-shadow: var(--shadow-glow);
+  transform: scale(1.01);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 80px 0 40px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+.footer-brand .logo-icon {
+  background: var(--footer-text);
+  color: var(--footer-bg);
+}
+.footer-brand .logo-text { color: var(--footer-text); }
+.footer-brand p {
+  color: var(--footer-muted);
+  font-size: 14px;
+  margin-top: 16px;
+  line-height: 1.7;
+}
+.footer-col h4 {
+  color: var(--footer-text);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-col a {
+  color: var(--footer-muted);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+.footer-col a:hover { color: var(--footer-text); }
+.footer-col .info-item {
+  color: var(--footer-muted);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer-col .hours-row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  color: var(--footer-muted);
+  font-size: 14px;
+}
+.footer-col .hours-row strong {
+  color: var(--footer-text);
+  font-weight: 500;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--footer-muted);
+}
+.footer-bottom-links {
+  display: flex;
+  gap: 24px;
+}
+.footer-bottom-links a {
+  color: var(--footer-muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-bottom-links a:hover { color: var(--footer-text); }
+
+/* ============================================================
+   COLOR PALETTE DISPLAY (in theme info)
+   ============================================================ */
+.palette-grid {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.palette-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.palette-color {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+.palette-label {
+  font-size: 10px;
+  color: var(--text-light);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-align: center;
+  max-width: 60px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .treatment-grid, .benefits-grid { grid-template-columns: 1fr; }
+  .booking-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .nav-links { display: none; }
+  .hero-content { padding: 40px 0; }
+  .hero h1 { font-size: 36px; }
+}
+@media (max-width: 600px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .theme-switcher { gap: 8px; }
+  .theme-btn { padding: 8px 16px; font-size: 11px; }
+}
+</style>
+</head>
+
+<body data-theme="nude-dore">
+
+<!-- ========== THEME SWITCHER ========== -->
+<div class="theme-switcher">
+  <span class="theme-switcher-label">Tema:</span>
+  <button class="theme-btn active" onclick="setTheme('nude-dore')">Nude Doré</button>
+  <button class="theme-btn" onclick="setTheme('champagne-classic')">Champagne Classic</button>
+  <button class="theme-btn" onclick="setTheme('rose-minimal')">Rosé Minimal</button>
+</div>
+
+<!-- ========== THEME INFO ========== -->
+<div class="theme-info" id="theme-info">
+  <!-- populated by JS -->
+</div>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+  <div class="container">
+    <a href="#" class="logo">
+      <div class="logo-icon">V</div>
+      <span class="logo-text">VIVANT</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#">Tratamentos</a></li>
+      <li><a href="#">A Clínica</a></li>
+      <li><a href="#">Equipe</a></li>
+    </ul>
+    <button class="header-cta">Agendar Consulta</button>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-overlay-bottom"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="hero-tag-line"></span>
+        <span class="hero-tag-text">Estética de Alta Precisão</span>
+      </div>
+      <h1>A arte de um <br><span class="highlight">sorriso eterno.</span></h1>
+      <p class="hero-desc">Onde a ciência encontra a sofisticação. Protocolos exclusivos para quem exige o extraordinário.</p>
+      <div class="hero-actions">
+        <button class="btn-hero">
+          Agendar Consultoria
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </button>
+        <a href="#" class="hero-phone">
+          <div class="hero-phone-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+          </div>
+          <div>
+            <span class="hero-phone-label">Concierge</span>
+            <span class="hero-phone-number">+55 11 99999-9999</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" style="fill: var(--bg-page)"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ========== TREATMENTS ========== -->
+<section class="treatments">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Nossos Serviços</span>
+      <h2 class="section-title">Excelência <span class="em">Estética</span></h2>
+      <p class="section-subtitle">Protocolos minimamente invasivos planejados digitalmente para preservar a beleza natural do seu sorriso.</p>
+    </div>
+    <div class="treatment-grid">
+      <!-- Card 1 -->
+      <div class="treatment-card">
+        <div class="treatment-card-image">
+          <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&q=80" alt="Lentes de Contato Dental">
+        </div>
+        <div class="treatment-card-body">
+          <div class="treatment-card-category"><span class="dot"></span> Estética</div>
+          <h3>Lentes de Contato</h3>
+          <p>Facetas ultrafinas de porcelana para um sorriso de cinema. Resultado imediato com aparência 100% natural.</p>
+          <div class="treatment-card-footer">
+            <span class="treatment-card-meta">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              60 min
+            </span>
+            <div class="treatment-card-arrow">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="treatment-card">
+        <div class="treatment-card-image">
+          <div class="treatment-card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/></svg>
+          </div>
+        </div>
+        <div class="treatment-card-body">
+          <div class="treatment-card-category"><span class="dot"></span> Ortodontia</div>
+          <h3>Invisalign</h3>
+          <p>Alinhadores transparentes para um sorriso perfeito sem aparelhos metálicos. Conforto e discrição totais.</p>
+          <div class="treatment-card-footer">
+            <span class="treatment-card-meta">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              45 min
+            </span>
+            <div class="treatment-card-arrow">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="treatment-card">
+        <div class="treatment-card-image">
+          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&q=80" alt="Implantes Dentários 3D">
+        </div>
+        <div class="treatment-card-body">
+          <div class="treatment-card-category"><span class="dot"></span> Implantes</div>
+          <h3>Implantes 3D</h3>
+          <p>Cirurgia guiada por computador com precisão milimétrica. Recuperação rápida e resultado excepcional.</p>
+          <div class="treatment-card-footer">
+            <span class="treatment-card-meta">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              90 min
+            </span>
+            <div class="treatment-card-arrow">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BENEFITS ========== -->
+<section class="benefits">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Por que nos escolher</span>
+      <h2 class="section-title">Mais que um sorriso, <br><span class="em">uma nova vida.</span></h2>
+      <p class="section-subtitle">Unimos arte, ciência e tecnologia para entregar resultados que superam expectativas.</p>
+    </div>
+    <div class="benefits-grid">
+      <!-- Benefit 1 -->
+      <div class="benefit-card">
+        <div class="benefit-icon style-1">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+        </div>
+        <h3>Transformação Estética</h3>
+        <p>Sorrisos desenhados digitalmente para harmonizar perfeitamente com os traços do seu rosto.</p>
+        <div class="benefit-divider">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Saiba mais
+        </div>
+      </div>
+      <!-- Benefit 2 -->
+      <div class="benefit-card">
+        <div class="benefit-icon style-2">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+        </div>
+        <h3>Saúde Integral</h3>
+        <p>A saúde bucal é a base sólida para o bem-estar de todo o seu corpo. Cuide-se por completo.</p>
+        <div class="benefit-divider">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Saiba mais
+        </div>
+      </div>
+      <!-- Benefit 3 -->
+      <div class="benefit-card">
+        <div class="benefit-icon style-3">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+        </div>
+        <h3>Tecnologia de Ponta</h3>
+        <p>Precisão absoluta com scanners 3D e impressão digital para tratamentos mais rápidos e confortáveis.</p>
+        <div class="benefit-divider">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Saiba mais
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BOOKING ========== -->
+<section class="booking-section">
+  <div class="container">
+    <div class="booking-grid">
+      <div class="booking-left">
+        <span class="section-tag">Concierge & Conforto</span>
+        <h2 class="section-title">Atendimento <br><span class="em">Exclusivo</span></h2>
+        <p class="section-subtitle">Do valet cortesia à aromaterapia na sala de espera. Redefinimos a experiência odontológica para que você se sinta em um hotel 5 estrelas.</p>
+        <ul class="concierge-list">
+          <li class="concierge-item">
+            <div class="concierge-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg>
+            </div>
+            <span>Valet Parking Gratuito</span>
+          </li>
+          <li class="concierge-item">
+            <div class="concierge-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/></svg>
+            </div>
+            <span>Check-in Digital</span>
+          </li>
+          <li class="concierge-item">
+            <div class="concierge-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
+            </div>
+            <span>Spa Odontológico</span>
+          </li>
+          <li class="concierge-item">
+            <div class="concierge-icon">
+              <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7.5 3.75H6A2.25 2.25 0 003.75 6v1.5M16.5 3.75H18A2.25 2.25 0 0120.25 6v1.5m0 9V18A2.25 2.25 0 0118 20.25h-1.5m-9 0H6A2.25 2.25 0 013.75 18v-1.5M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <span>Raio-X Digital na Sala</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="booking-right">
+        <div class="booking-form-card">
+          <div class="form-blob-1"></div>
+          <div class="form-blob-2"></div>
+          <h3>Agende sua Visita</h3>
+          <p class="form-desc">Preencha seus dados para um atendimento exclusivo.</p>
+          <input class="form-field" type="text" placeholder="Nome Completo">
+          <input class="form-field" type="tel" placeholder="WhatsApp / Telefone">
+          <select class="form-field form-select">
+            <option>Primeira Avaliação</option>
+            <option>Retorno</option>
+            <option>Emergência / Dor</option>
+          </select>
+          <button class="btn-form-submit">SOLICITAR AGENDAMENTO</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" style="margin-bottom:0">
+          <div class="logo-icon">V</div>
+          <span class="logo-text">VIVANT</span>
+        </a>
+        <p>Odontologia Premium. Precisão tecnológica com a delicadeza que você merece.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tratamentos</h4>
+        <ul>
+          <li><a href="#">Lentes de Contato</a></li>
+          <li><a href="#">Invisalign</a></li>
+          <li><a href="#">Implantes 3D</a></li>
+          <li><a href="#">Harmonização</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li class="info-item">📍 Av. Paulista, 1000 - SP</li>
+          <li class="info-item">📞 (11) 99999-9999</li>
+          <li class="info-item">✉️ contato@vivant.com.br</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Horários</h4>
+        <div class="hours-row"><span>Seg - Sex</span> <strong>08:00 - 19:00</strong></div>
+        <div class="hours-row" style="margin-top:12px"><span>Sábado</span> <strong>09:00 - 13:00</strong></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 VIVANT Odontologia. Todos os direitos reservados.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#">CRO-SP 00.000</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const themeData = {
+  'nude-dore': {
+    name: 'Nude Doré',
+    desc: 'Luxo editorial com tons nude quentes e acentos dourados antigos. Inspirado em maisons de alta costura — transmite exclusividade, sofisticação e confiança. Ideal para clínicas premium que querem um visual de marca de luxo sem perder a seriedade clínica.',
+    fonts: 'Bodoni Moda + Raleway',
+    style: 'High-fashion editorial · Minimalismo sofisticado',
+    vibe: 'Dourado antigo, marfim quente, espresso profundo',
+    colors: [
+      { label: 'Page BG', hex: '#FDFAF6' },
+      { label: 'Subtle BG', hex: '#F5EDE1' },
+      { label: 'Primary', hex: '#B8923F' },
+      { label: 'Accent', hex: '#C9A96E' },
+      { label: 'CTA', hex: '#1F1A14' },
+      { label: 'CTA Text', hex: '#F5EDE1' },
+      { label: 'Text Dark', hex: '#1F1A14' },
+      { label: 'Text Medium', hex: '#6B6056' },
+      { label: 'Border', hex: '#E8E0D4' },
+      { label: 'Footer BG', hex: '#1F1A14' }
+    ]
+  },
+  'champagne-classic': {
+    name: 'Champagne Classic',
+    desc: 'Elegância clássica atemporal com tons champagne e bronze quente. Fontes romanas capitulares (Cinzel) trazem gravidade institucional — perfeito para clínicas que querem passar tradição, confiança e sofisticação sem exagero. Sóbrio e premium.',
+    fonts: 'Cinzel + Lato',
+    style: 'Clássico institucional · Elegância atemporal',
+    vibe: 'Bronze quente, pérola, espresso',
+    colors: [
+      { label: 'Page BG', hex: '#F9F6F1' },
+      { label: 'Subtle BG', hex: '#F0E8DD' },
+      { label: 'Primary', hex: '#8C6B4A' },
+      { label: 'Accent', hex: '#C4A87D' },
+      { label: 'CTA', hex: '#1C1714' },
+      { label: 'CTA Text', hex: '#F0E8DD' },
+      { label: 'Text Dark', hex: '#1C1714' },
+      { label: 'Text Medium', hex: '#695D51' },
+      { label: 'Border', hex: '#E2D9CC' },
+      { label: 'Footer BG', hex: '#1C1714' }
+    ]
+  },
+  'rose-minimal': {
+    name: 'Rosé Minimal',
+    desc: 'Sofisticação spa-like com tons rosé e champagne dourado. A combinação Playfair Display + Raleway cria um visual editorial refinado com toque feminino e acolhedor — ideal para clínicas que querem transmitir cuidado, beleza e um ambiente premium de bem-estar.',
+    fonts: 'Playfair Display + Raleway',
+    style: 'Spa luxury · Minimalismo acolhedor',
+    vibe: 'Rosé taupe, champagne, mogno suave',
+    colors: [
+      { label: 'Page BG', hex: '#FBF7F5' },
+      { label: 'Subtle BG', hex: '#F2EAE6' },
+      { label: 'Primary', hex: '#9C7B72' },
+      { label: 'Accent', hex: '#C8A882' },
+      { label: 'CTA', hex: '#231C1A' },
+      { label: 'CTA Text', hex: '#F2EAE6' },
+      { label: 'Text Dark', hex: '#231C1A' },
+      { label: 'Text Medium', hex: '#6E5E58' },
+      { label: 'Border', hex: '#E5DBD6' },
+      { label: 'Footer BG', hex: '#231C1A' }
+    ]
+  }
+};
+
+function renderThemeInfo(themeKey) {
+  const t = themeData[themeKey];
+  const el = document.getElementById('theme-info');
+  let swatchesHtml = t.colors.map(c =>
+    `<div class="swatch"><span class="swatch-dot" style="background:${c.hex}"></span>${c.label}: ${c.hex}</div>`
+  ).join('');
+
+  el.innerHTML = `
+    <div class="theme-info-inner">
+      <h2>${t.name}</h2>
+      <p class="theme-desc">${t.desc}</p>
+      <div class="swatches">${swatchesHtml}</div>
+      <div class="theme-meta">
+        <div class="theme-meta-item"><strong>Tipografia</strong> ${t.fonts}</div>
+        <div class="theme-meta-item"><strong>Estilo</strong> ${t.style}</div>
+        <div class="theme-meta-item"><strong>Vibe</strong> ${t.vibe}</div>
+      </div>
+    </div>
+  `;
+}
+
+function setTheme(themeKey) {
+  document.body.setAttribute('data-theme', themeKey);
+  document.querySelectorAll('.theme-btn').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+  renderThemeInfo(themeKey);
+}
+
+// Initial render
+renderThemeInfo('nude-dore');
+</script>
+</body>
+</html>
