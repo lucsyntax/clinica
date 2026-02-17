@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     description: "Sorrisos saudáveis com tecnologia e cuidado. Agende sua avaliação.",
     type: "website",
   },
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
